@@ -18,16 +18,17 @@ namespace RecipeOrganiser
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BakingMenu : Window
     {
-        public MainWindow()
+        public BakingMenu()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void cookingButton(object sender, RoutedEventArgs e)
         {
-
+            CookingMenu cooking = new CookingMenu();
+            cooking.Show();
         }
     }
 }
