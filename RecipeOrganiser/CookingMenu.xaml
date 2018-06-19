@@ -1,4 +1,4 @@
-﻿<Window x:Class="RecipeOrganiser.CookingMenu"
+﻿<Page x:Class="RecipeOrganiser.CookingMenu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="Recipe Organiser" Height="351" Width="526" Background="IndianRed" FontFamily="Arial">
     <Grid>
-        <Button Content="Baking" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px" Background="LightBlue"/>
-        <Button Content="Cooking" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px" Background="IndianRed"/>
+        <Button Content="Baking" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px" Background="LightBlue" Click="bakingButton"/>
+        <Button Content="Cooking" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px"/>
         <Button Content="Add" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
         <Button Content="Keywords" HorizontalAlignment="Left" Margin="186,80,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
         <Button Content="Ingredients" HorizontalAlignment="Left" Margin="352,80,-18,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
@@ -17,4 +17,4 @@
         <Button Content="Portions" HorizontalAlignment="Left" Margin="352,200,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
 
     </Grid>
-</Window>
+</Page>
