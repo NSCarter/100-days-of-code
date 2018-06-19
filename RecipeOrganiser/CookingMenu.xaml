@@ -7,14 +7,54 @@
         mc:Ignorable="d"
         Title="Recipe Organiser" Height="351" Width="526" Background="IndianRed" FontFamily="Arial">
     <Grid>
-        <Button Content="Baking" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px" Background="LightBlue" Click="bakingButton"/>
-        <Button Content="Cooking" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
-        <Button Content="Keywords" HorizontalAlignment="Left" Margin="186,80,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
-        <Button Content="Ingredients" HorizontalAlignment="Left" Margin="352,80,-18,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
-        <Button Content="Do Not &#xa; Include" HorizontalAlignment="Left" Margin="20,200,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
-        <Button Content="All Recipes" HorizontalAlignment="Left" Margin="186,200,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
-        <Button Content="Portions" HorizontalAlignment="Left" Margin="352,200,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px"/>
+        <Button Content="Baking" HorizontalAlignment="Left" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px" Click="bakingButton">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="LightBlue"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="LightSkyBlue"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="Cooking" HorizontalAlignment="Left" Margin="258,0,0,0" VerticalAlignment="Top" Width="260" Height="60" FontSize="40px">
+            <Button.Style>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Background" Value="IndianRed"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type Button}">
+                                <Border Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="IndianRed"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="20,80,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px" Style="{StaticResource GreyButtonStyle}"/>
+        <Button Content="Keywords" HorizontalAlignment="Left" Margin="186,80,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px" Style="{StaticResource GreyButtonStyle}"/>
+        <Button Content="Ingredients" HorizontalAlignment="Left" Margin="352,80,-18,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px" Style="{StaticResource GreyButtonStyle}"/>
+        <Button Content="Do Not &#xa; Include" HorizontalAlignment="Left" Margin="20,200,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px" Style="{StaticResource GreyButtonStyle}"/>
+        <Button Content="All Recipes" HorizontalAlignment="Left" Margin="186,200,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px" Style="{StaticResource GreyButtonStyle}"/>
+        <Button Content="Portions" HorizontalAlignment="Left" Margin="352,200,0,0" VerticalAlignment="Top" Width="146" Height="100" FontSize="25px" Style="{StaticResource GreyButtonStyle}"/>
 
     </Grid>
 </Page>
